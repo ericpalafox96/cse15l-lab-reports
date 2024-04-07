@@ -1,12 +1,14 @@
-# 'cd' - change directory
+# Lab Report #1
+
+## 'cd' - change directory
 ***
 ![Image](cd.png)
 
-# 'ls' - list
+## 'ls' - list
 ***
 ![Image](ls.png)
 
-# 'cat' - concatenate
+## 'cat' - concatenate
 ***
 ![Image](cat1.png)
 
