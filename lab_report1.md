@@ -3,7 +3,7 @@
 ## 'cd' - change directory
 ***
 
-no arguments - Absolute path: (/Users/ericpalafox)
+**no arguments** - Absolute path: (/Users/ericpalafox)
 
 directory - Absolute path (/Users/ericpalafox/Downloads)
 
