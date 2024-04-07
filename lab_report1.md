@@ -1,7 +1,7 @@
-# ** Lab Report #1 **
+# **Lab Report #1**
 ***
 
-* ## 'cd' - change directory *
+## 'cd' - change directory
 ***
 
 no arguments - Absolute path: (/Users/ericpalafox)
@@ -15,7 +15,7 @@ file - Absolute path (/Users/ericpalafox/Downloads/test.txt)
 
 ![Image](cd.png)
 
-* ## 'ls' - list *
+## 'ls' - list
 ***
 
 no arguments - Absolute path ()
@@ -26,7 +26,7 @@ file - Absolute path ()
 
 ![Image](ls.png)
 
-* ## 'cat' - concatenate *
+## 'cat' - concatenate
 ***
 
 no arguments - Absolute path ()
