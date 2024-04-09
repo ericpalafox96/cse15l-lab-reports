@@ -19,7 +19,7 @@ file - Absolute path: (/home/codespace/nvm)
 ***
 
 no arguments - Absolute path: (/home/codespace)
-- While running 'ls' with no arguments, the output will list all of the contents in our current working folder, in this case the contents listed in /home/codespace. The contents in this directory are nvm and java. Also note that no argument was inputted so bash will automatically assume you would like the listed conetents of the current working directory.
+- While running 'ls' with no arguments, the output will list all of the contents in our current working folder, in this case the contents listed in /home/codespace. The contents in this directory are nvm and java. Also note that no argument was inputted so bash will automatically assume you would like the listed contents of the current working directory.
 
 directory - Absolute path: (/home/codespace)
 - While running 'ls java' we are listing all of the contents found in the /home/codespace/java and we can see that there are "17.01.10-ms, 21.0.2-ms, and current" within the java folder/directory. The output will list all of the contents of the given path, this case we say that these files and current directory are within the current working directory with /java appended.
