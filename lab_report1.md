@@ -41,6 +41,4 @@ directory - Absolute path (/workspaces/cse15l-lab-reports)
 file - Absolute path (/workspaces/cse15l-lab-reports/lecture1/messages)
 - While running 'cat es-us.txt es-mx.txt' we can see an output of "Hello World! ¿Hola Mundo?" since these are the contents within each of the files, respectively. Hence, the two contents will be appended and we will see the output of the concatenated files together.
 
-![Image](cat1.png)
-
-![Image](cat2.png)
+![Image](cat.png)
