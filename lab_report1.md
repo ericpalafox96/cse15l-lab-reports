@@ -33,7 +33,7 @@ file - Absolute path: (/home/codespace/nvm)
 ***
 
 no arguments - Absolute path (/workspaces/cse15l-lab-reports)
-- While running 'cat' the terminal will actually stop running as there is no way to concatenate something that is empty. We must be sure that we are giving at least 1 argument to ensure that 'cat' will run properly, hence there is no output and we must terminate using "(CTRL)+(C)".
+- While running 'cat' the terminal will actually stop running as there is no way to concatenate something that is empty. We must be sure that we are giving at least 1 argument to ensure that 'cat' will run properly, hence there is no output and we must terminate using (CTRL)+(C).
 
 directory - Absolute path (/workspaces/cse15l-lab-reports)
 - While running 'cat lecture1 messages' we receive an error message which indicates that we cannot concatenate a directory, we are only able to concatenate files with other files, but not directories. This would certainly be an issue if it were possible as we may accidentally concatenate the wrong contents which may lead to potential issues. Also, we can see that /messages is not located within this directory, we must be sure that we are within the lecture1 directory to be able to access /messages.
