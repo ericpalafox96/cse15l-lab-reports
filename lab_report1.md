@@ -1,7 +1,7 @@
 # **Lab Report #1**
 ***
 
-## '''cd''' - change directory
+## ```cd``` - change directory
 ***
 
 no arguments - Absolute path: ('''/workspaces/cse15l-lab-reports''')
