@@ -5,7 +5,7 @@
 ***
 
 no arguments - Absolute path: (```/workspaces/cse15l-lab-reports```)
-- While running ```cd``` with no arguments, we are changing directory into the home or root folder since no argument was given. In this case we can run pwd and we see that it is ```/home/codespace``` when using the Github codespaces. There is no error as this is the expected output for the given input.
+- While running ```cd``` with no arguments, we are changing directory into the home or root folder since no argument was given. In this case we can run ```pwd``` and we see that it is ```/home/codespace``` when using the Github codespaces. There is no error as this is the expected output for the given input.
 
 ![Image](cd1.png)
 
