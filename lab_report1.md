@@ -15,7 +15,7 @@ directory - Absolute path: (```/home/codespace```)
 ![Image](cd2.png)
 
 file - Absolute path: (```/home/codespace/nvm```)
-- While running ```cd README.md``` we are trying to change directories into a file, however, this is not possible since we are changing the working directory and this cannot be a file. In this case we can see the output as ```cd: README.md: Not a directory``` since we can only use cd to change into different directories, not files. This is a user input error, however, there is no programming error as this is expected since this is not a valid input for the given command, we must be sure to include a directory to avoid this error.
+- While running ```cd README.md``` we are trying to change directories into a file, however, this is not possible since we are changing the working directory and this cannot be a file. In this case we can see the output as ```cd: README.md: Not a directory``` since we can only use ```cd``` to change into different directories, not files. This is a user input error, however, there is no programming error as this is expected since this is not a valid input for the given command, we must be sure to include a directory to avoid this error.
 
 ![Image](cd3.png)
 
@@ -33,7 +33,7 @@ directory - Absolute path: (```/home/codespace```)
 ![Image](ls2.png)
 
 file - Absolute path: (```/home/codespace/nvm```)
-- While running ```ls README.md``` the output will be the same argument which is ```README.md``` since this is a file and there is nothing to list but the name of the file itself. If there were more contents within this location, then we would be able to see the list but this is the file so this will list the name of the file only. There is no error as this is the expected output for the given input.
+- While running ```ls README.md``` the output will be the same argument which is ```README.md``` since this is a file and there is nothing to list but the name of the file itself. If there were more contents within this location, then we would be able to see the list but this a the file so this will list the name of the file only. There is no error as this is the expected output for the given input.
 
 ![Image](ls3.png)
 
@@ -46,7 +46,7 @@ no arguments - Absolute path (```/workspaces/cse15l-lab-reports```)
 ![Image](cat1.png)
 
 directory - Absolute path (```/workspaces/cse15l-lab-reports```)
-- While running ```cat lecture1 messages``` we receive an error message which indicates that we cannot concatenate a directory, we are only able to concatenate files with other files, but not directories. This would certainly be an issue if it were possible as we may accidentally concatenate the wrong contents which may lead to potential issues. Also, we can see that ```/messages``` is not located within this directory, we must be sure that we are within the lecture1 directory to be able to access ```/messages```, so there is an error message which tells us that this location cannot be found.
+- While running ```cat lecture1 messages``` we receive an error message which indicates that we cannot concatenate a directory, we are only able to concatenate files with other files, but not directories. This would certainly be an issue if it were possible as we may accidentally concatenate the wrong contents which may lead to potential issues. Also, we can see that ```/messages``` is not located within this directory, we must be sure that we are within the lecture1 directory to be able to access ```/messages```, so there is another error message which tells us that this location cannot be found.
 
 ![Image](cat2.png)
 
