@@ -14,7 +14,7 @@ class ChatHandler implements URLHandler {
     String s = "";
 
     public String handleRequest(URI url) {
-        String query = url.getQuery();
+        
         if (url.getPath().equals("/")){
             return "Please input a query";
         }
