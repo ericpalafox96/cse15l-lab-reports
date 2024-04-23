@@ -72,4 +72,4 @@ class ChatServer {
 
 ## Part 3
 ***
-This were interesting weeks as I learned how to start up my own server and deal with different queries. Also, I learned connect my personal computer to a server which is located in the CSE basement, this was pretty cool to see how these techniques may help save time when working on a project for example. Finally, I learned how to use different methods such as `getQuery()` which allow us to handle the different url's, this is a very cool topic and can be very useful in many ways.
+These were interesting weeks as I learned how to start up my own server and deal with different queries. Also, I learned connect my personal computer to a server which is located in the CSE basement, this was pretty cool to see how these techniques may help save time when working on a project for example. Finally, I learned how to use different methods such as `getQuery()` which allow us to handle the different url's, this is a very cool topic and can be very useful in many ways.
