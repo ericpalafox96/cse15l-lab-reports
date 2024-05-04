@@ -5,7 +5,6 @@
 ***
 
 1.
-
 `{1, 2, 3}`
 an array of the numbers 1, 2, and 3 is the failure inducing input which demonstrates there is a bug
 ```
