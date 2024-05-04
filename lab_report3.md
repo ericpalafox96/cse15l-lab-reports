@@ -4,7 +4,9 @@
 ## Part 1
 ***
 
-1. `{1, 2, 3}` - an array of the numbers 1, 2, and 3 is the failure inducing input which demonstrates there is a bug
+1.
+`{1, 2, 3}`
+an array of the numbers 1, 2, and 3 is the failure inducing input which demonstrates there is a bug
 ```
 import static org.junit.Assert.*;
 import org.junit.*;
@@ -18,7 +20,9 @@ public void testReverseInPlace(){
   }
 }
 ```
-2. `{ 3 }` - an array of the number 3 is the input which does not induce a failure and does not demonstrate there is a bug
+2.
+`{ 3 }`
+an array of the number 3 is the input which does not induce a failure and does not demonstrate there is a bug
 ```
 import static org.junit.Assert.*;
 import org.junit.*;
