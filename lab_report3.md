@@ -72,6 +72,7 @@ public class ArrayExamples {
   }
 }
 ```
+
 5. We were able to fix this issue by creating a copy of the array and putting this into `arrCopy`. This will fix the issue since we do not replace the second half of the array as there is
 a copy and we do not make any changes to the original array. Before the fix, we were trying to copy the values to the second half of the array, but this was not possible since the values in the
 first half of the array were no longer the same as they had been changed in the loop, respectively.
