@@ -81,16 +81,16 @@ first half of the array were no longer the same as they had been changed in the 
 
 Note: The `*` at the end of each line is searching through all of the files in the current working directory.
 
-Example 1: `-l` - This command is checking all files to match the pattern but this will only include those that do contain the given keyword within the file itself. This would certainly be useful when needing to find text that contains a specific keyword.
+Example 1: `-l` - This command is checking all files to match the pattern but this will only include those that do contain the given pattern within the file itself. This would certainly be useful when needing to find text that matches a specific pattern.
 
-- In this example we are looking for any files which contain `bcr` within the file itself.
+- In this example we are looking for any files which contain `Giuliani` within the file `chapter-9.txt`, we are given an output of the name of the file if it does match this pattern.
 ```
-ericpalafox@Erics-iMac biomed % grep -l "bcr" *      
-1471-2164-3-6.txt
-ericpalafox@Erics-iMac biomed % 
+ericpalafox@Erics-iMac 911report % grep -l "Giuliani" chapter-9.txt
+chapter-9.txt
+ericpalafox@Erics-iMac 911report % 
 ```
 
-- In this example we are looking for any files which contain `Guiliani` within the file itself.
+- In this example we are looking for any files which contain `Guiliani` within the any of the files located in the current working directory, we are given the names of the files which match this pattern.
 ```
 ericpalafox@Erics-iMac 911report % grep -l "Giuliani" *         
 chapter-13.5.txt
@@ -98,9 +98,9 @@ chapter-9.txt
 ericpalafox@Erics-iMac 911report % 
 ```
 
-Example 2: `-L` - This command is checking all files that do not match the pattern given within the file itself. This would certainly be useful when needing to find text that does not contain a specific keyword.
+Example 2: `-L` - This command is checking all files that do not match the pattern given within the file itself. This would certainly be useful when needing to find text that does not match this pattern.
 
-- In this example we are looking for any files which do not contain `police` within the file itself.
+- In this example we are looking for any files in the current working directory which do not contain `police` within the file itself, we are given an output of the names of the files which do not match this pattern.
 ```
 ericpalafox@Erics-iMac 911report % grep -L "police" *    
 chapter-1.txt
@@ -113,23 +113,16 @@ preface.txt
 ericpalafox@Erics-iMac 911report % 
 ```
 
-- In this example we are looking for any files which do not contain `Virginia` within the file itself.
+- In this example we are looking for the keyword `police` within the file `chapter1.txt`, we are given an output of the name of the file if it does not match this exact pattern.
 ```
-ericpalafox@Erics-iMac 911report % grep -L "Virginia" *
-chapter-10.txt
-chapter-12.txt
-chapter-13.1.txt
-chapter-13.2.txt
-chapter-2.txt
-chapter-5.txt
-chapter-8.txt
-preface.txt
+ericpalafox@Erics-iMac 911report % grep -L "police" chapter-1.txt
+chapter-1.txt
 ericpalafox@Erics-iMac 911report % 
 ```
 
-Example 3: `-i` - This command will ignore the case sensitivity and will look for the specific keyword within the given location, and will separate each instance of the word by lines. This is certainly useful as we may need to find a particular keyword where case sensitivity is not important and we have a large text for example.
+Example 3: `-i` - This command will ignore the case sensitivity and will look for the specific keywords within the given location, and will separate each instance of the word by lines. This is certainly useful as we may need to find a particular keyword where case sensitivity is not important and we have a large text for example.
 
-- In this example we are looking for files which contain the string `police`, however, the case sensitivity is not important as `Police` and any other variation will also be found if it is within the files.
+- In this example we are looking for files which contain the string `police`, however, the case sensitivity is not important as `Police` and any other variation will also be found if it is within the file `chapter-9.txt`.
 ```
 ericpalafox@Erics-iMac 911report % grep -i "police" chapter-9.txt
                 local public servants, especially the first responders: fire, police, emergency
@@ -186,7 +179,7 @@ ericpalafox@Erics-iMac 911report % grep -i "police" chapter-9.txt
 ericpalafox@Erics-iMac 911report % 
 ```
 
-- In this example we are looking for files which contain the string `PATH`, however, the case sensitivity is not important as `path` and any other variation will also be found if it is within the files.
+- In this example we are looking for files which contain the string `PATH`, however, the case sensitivity is not important as `path` and any other variation will also be found if it is within the files located in the current working directory. Also note, we will see the name of each file first with a `:` separated by the line where we see the instance of this string since we are looking at multiple files and several match.
 ```
 ericpalafox@Erics-iMac 911report % grep -i "PATH" * 
 chapter-1.txt:    The protocols did not contemplate an intercept. They assumed the fighter escort would be discreet, "vectored to a position five miles directly behind the hijacked aircraft," where it could perform its mission to monitor the aircraft's flight path.
@@ -248,13 +241,137 @@ ericpalafox@Erics-iMac 911report %
 ```
 
 
-Example 4:
+Example 4: `-n` - This command will locate the instance of each pattern and provide the line number where the pattern occurs.
 
+- In this example we are looking through `chapter-9.txt` to find each instance of the pattern `police` and separating them by line number in chronological order. 
+```
+ericpalafox@Erics-iMac 911report % grep -n "police" chapter-9.txt
+9:                local public servants, especially the first responders: fire, police, emergency
+137:            Most Port Authority police commands used ultra-high-frequency radios. Although all
+150:            The 40,000-officer NYPD was headed by a police commissioner, whose duties were not
+172:            The 11,000-member FDNY was headed by a fire commissioner who, unlike the police
+216:                Authority police desk in 5 WTC, to be activated by members of the Port Authority
+217:                police when the FDNY units responding to the WTC complex so requested. However, in
+354:            Civilians who called the Port Authority police desk located at 5 WTC were advised to
+410:            Several South Tower occupants called the Port Authority police desk in 5 WTC. Some
+461:                working on upper floors. Chiefs also spoke with Port Authority police personnel and
+473:                Authority police officer to evacuate the South Tower, because in their judgment the
+525:                and 800 police officers from all over the city. The Chief of Department arrived at
+580:            The Port Authority's on-site commanding police officer was standing in the concourse
+583:                officers in the WTC Command to meet at the police desk in 5 WTC. Soon thereafter, he
+588:            One Port Authority police officer at the WTC immediately began climbing stairwell C
+593:            Within minutes of impact, Port Authority police officers from the PATH, bridges,
+602:                calamity in the North Tower. This order was given over WTC police radio channel W,
+766:            At 8:59, the Port Authority police desk at Newark Airport told a third party that a
+770:                Port Authority police desk in Jersey City confirmed that employees on the 64th floor
+771:                should "be careful, stay near the stairwells, and wait for the police to come up."
+772:                When the third party inquired again at 9:31, the police desk at Newark Airport
+773:                advised that they "absolutely" evacuate. The third party informed the police desk
+781:                concourse, where other police officers guided them to exit the concourse and complex
+1067:                decided to send one ESU team (each with approximately six police officers) up each
+1105:            Throughout this period (9:03 to 9:59), a group of NYPD and Port Authority police
+1156:            Initial responders from outside PAPD commands proceeded to the police desk in 5 WTC
+1168:                police desk reporting at least 100 people trapped.
+1171:                9:30, the PAPD central police desk requested that responding officers meet at West
+1310:                advised orally to leave the building by other firefighters and police who were
+1430:                police officers to descend because they lacked the protective gear and equipment
+1431:                needed to handle the increasing smoke and heat. The police officers reluctantly
+1441:                teamed up with a Port Authority police officer and acted as a spotter in advising
+1469:                37 fatalities-the largest loss of life of any police force in history. The NYPD
+1470:                suffered 23 fatalities-the second largest loss of life of any police force in
+1512:                response. Many fire and police agencies that responded had extensive prior
+1519:                attack. In addition to county fire, police, and sheriff 's departments, the response
+1577:                were not (1) fire or police first responders, (2) security or fire safety personnel
+1765:                themselves. Although there were ESU teams and a few individual police officers
+1823:                command that comprehensively deploys all dispatched police, fire, and other first
+1871:            The story with respect to Port Authority police officers in the NorthTower is less
+1873:                Authority police evacuation order was given. Since September 11, the Port Authority
+ericpalafox@Erics-iMac 911report % 
 ```
 
+- In this example we are looking for the pattern `police` within all of the files of our current working directory. We can see that the name of the file, line number, are listed before the line where it occurs, in the format `filename:linenumber: textwherelineoccurs`
+```
+ericpalafox@Erics-iMac 911report % grep -n "police" *            
+chapter-10.txt:24:                of a military police lead vehicle and a van; the proposed briefing theater had no
+chapter-11.txt:772:                officials-local airport managers and local police departments- who had not seen such
+chapter-11.txt:791:                concerned citizens. Representatives of the Justice Department, the FAA, local police
+chapter-12.txt:255:                violent extremism. According to Karachi's police commander, there are 859 madrassahs
+chapter-12.txt:296:            The country's vast unpoliced regions make Pakistan attractive to extremists seeking
+chapter-12.txt:518:                with al Qaeda. Saudi police are regularly being killed in shootouts with terrorists.
+chapter-13.3.txt:711:                line workers, but not police or the Department of Corrections, from transmitting
+chapter-13.3.txt:716:            47. On the relationship between the FBI and state and local police forces, see
+chapter-13.3.txt:1482:                screener. The terminal was evacuated, and police found miscellaneous gun parts,
+chapter-13.4.txt:87:                coincided with a police station bombing in Zagreb where the timing device of the
+chapter-13.4.txt:271:                other than the CIA. According to Lance, the Philippine police officer, who after
+chapter-13.4.txt:1153:                police custody in Qatar. See CIA briefing by CTC specialists (June 22, 2004); Walter
+chapter-13.4.txt:2706:                Hamburg police, and the UAE official's search, see German BKA report, investigative
+chapter-13.5.txt:1355:                recorded calls to the Port Authority police desk from people in the towers on
+chapter-13.5.txt:2194:                from police that morning.
+chapter-13.5.txt:2416:                special approval by senior U.S. government officials. On September 13, Tampa police
+chapter-13.5.txt:2418:                the airport so they could get on a plane to Lexington. Tampa police arranged for two
+chapter-13.5.txt:2437:                Saudi nationals debarked from the plane and were met by local police. Their private
+chapter-13.5.txt:2438:                security guards were paid, and the police then escorted the three Saudi passengers
+chapter-13.5.txt:2443:                to Lexington by a local police officer in Lexington who did not have firsthand
+chapter-13.5.txt:2771:                White House to kill the president. The man was shot by police and then killed
+chapter-13.5.txt:2876:            8. For Pakistan's unpoliced areas, see Tasneem Noorani interview (Oct. 27, 2003).
+chapter-3.txt:90:            Yousef was captured in Pakistan following the discovery by police in the Philippines
+chapter-3.txt:401:                in tracking fugitives, with much local police knowledge. The department's Drug
+chapter-3.txt:799:                specifically accorded "no police, subpoena, or law enforcement powers or internal
+chapter-3.txt:1281:                only for the FBI and CIA but also for local police.
+chapter-3.txt:1308:                enhanced, at least on paper, Clarke's authority to police these assignments. Because
+chapter-3.txt:1329:                critical infrastructures, our power systems, water supplies, police, fire, and
+chapter-3.txt:1605:                police from an al Qaeda cell in Nairobi.
+chapter-6.txt:32:                was a signal for Abu Hoshar to commence a terrorist operation, Jordanian police
+chapter-6.txt:232:                informed the President that the FBI would advise police in the United States to step
+chapter-6.txt:1815:                governments' police and intelligence officers to stop them. You are left waiting for
+chapter-7.txt:375:                law-abiding citizen with long-standing, friendly contacts among local police and FBI
+chapter-7.txt:561:                police and a UAE representative tried to find him in Germany, visiting mosques and
+chapter-7.txt:564:                in Hamburg. The UAE government then told the Hamburg police they could call off the
+chapter-7.txt:682:                Arabia that borders Yemen; this weakly policed area is sometimes called "the wild
+chapter-9.txt:9:                local public servants, especially the first responders: fire, police, emergency
+chapter-9.txt:137:            Most Port Authority police commands used ultra-high-frequency radios. Although all
+chapter-9.txt:150:            The 40,000-officer NYPD was headed by a police commissioner, whose duties were not
+chapter-9.txt:172:            The 11,000-member FDNY was headed by a fire commissioner who, unlike the police
+chapter-9.txt:216:                Authority police desk in 5 WTC, to be activated by members of the Port Authority
+chapter-9.txt:217:                police when the FDNY units responding to the WTC complex so requested. However, in
+chapter-9.txt:354:            Civilians who called the Port Authority police desk located at 5 WTC were advised to
+chapter-9.txt:410:            Several South Tower occupants called the Port Authority police desk in 5 WTC. Some
+chapter-9.txt:461:                working on upper floors. Chiefs also spoke with Port Authority police personnel and
+chapter-9.txt:473:                Authority police officer to evacuate the South Tower, because in their judgment the
+chapter-9.txt:525:                and 800 police officers from all over the city. The Chief of Department arrived at
+chapter-9.txt:580:            The Port Authority's on-site commanding police officer was standing in the concourse
+chapter-9.txt:583:                officers in the WTC Command to meet at the police desk in 5 WTC. Soon thereafter, he
+chapter-9.txt:588:            One Port Authority police officer at the WTC immediately began climbing stairwell C
+chapter-9.txt:593:            Within minutes of impact, Port Authority police officers from the PATH, bridges,
+chapter-9.txt:602:                calamity in the North Tower. This order was given over WTC police radio channel W,
+chapter-9.txt:766:            At 8:59, the Port Authority police desk at Newark Airport told a third party that a
+chapter-9.txt:770:                Port Authority police desk in Jersey City confirmed that employees on the 64th floor
+chapter-9.txt:771:                should "be careful, stay near the stairwells, and wait for the police to come up."
+chapter-9.txt:772:                When the third party inquired again at 9:31, the police desk at Newark Airport
+chapter-9.txt:773:                advised that they "absolutely" evacuate. The third party informed the police desk
+chapter-9.txt:781:                concourse, where other police officers guided them to exit the concourse and complex
+chapter-9.txt:1067:                decided to send one ESU team (each with approximately six police officers) up each
+chapter-9.txt:1105:            Throughout this period (9:03 to 9:59), a group of NYPD and Port Authority police
+chapter-9.txt:1156:            Initial responders from outside PAPD commands proceeded to the police desk in 5 WTC
+chapter-9.txt:1168:                police desk reporting at least 100 people trapped.
+chapter-9.txt:1171:                9:30, the PAPD central police desk requested that responding officers meet at West
+chapter-9.txt:1310:                advised orally to leave the building by other firefighters and police who were
+chapter-9.txt:1430:                police officers to descend because they lacked the protective gear and equipment
+chapter-9.txt:1431:                needed to handle the increasing smoke and heat. The police officers reluctantly
+chapter-9.txt:1441:                teamed up with a Port Authority police officer and acted as a spotter in advising
+chapter-9.txt:1469:                37 fatalities-the largest loss of life of any police force in history. The NYPD
+chapter-9.txt:1470:                suffered 23 fatalities-the second largest loss of life of any police force in
+chapter-9.txt:1512:                response. Many fire and police agencies that responded had extensive prior
+chapter-9.txt:1519:                attack. In addition to county fire, police, and sheriff 's departments, the response
+chapter-9.txt:1577:                were not (1) fire or police first responders, (2) security or fire safety personnel
+chapter-9.txt:1765:                themselves. Although there were ESU teams and a few individual police officers
+chapter-9.txt:1823:                command that comprehensively deploys all dispatched police, fire, and other first
+chapter-9.txt:1871:            The story with respect to Port Authority police officers in the NorthTower is less
+chapter-9.txt:1873:                Authority police evacuation order was given. Since September 11, the Port Authority
+ericpalafox@Erics-iMac 911report % 
 ```
 
 Sources:
 
-`https://www.freecodecamp.org/news/grep-command-in-linux-usage-options-and-syntax-examples/`
-`https://www.geeksforgeeks.org/grep-command-in-unixlinux/`
+[Source1](https://www.freecodecamp.org/news/grep-command-in-linux-usage-options-and-syntax-examples/)
+[Source2](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
