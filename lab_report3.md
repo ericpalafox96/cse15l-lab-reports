@@ -289,7 +289,7 @@ ericpalafox@Erics-iMac 911report % grep -n "police" chapter-9.txt
 ericpalafox@Erics-iMac 911report % 
 ```
 
-- In this example we are looking for the pattern `police` within all of the files of our current working directory. We can see that the name of the file, line number, are listed before the line where it occurs, in the format `filename:linenumber: textwherelineoccurs`
+- In this example we are looking for the pattern `police` within all of the files of our current working directory. We can see that the name of the file, line number, are listed before the line where it occurs, in the format `filename:linenumber: textwherelineoccurs`.
 ```
 ericpalafox@Erics-iMac 911report % grep -n "police" *            
 chapter-10.txt:24:                of a military police lead vehicle and a van; the proposed briefing theater had no
@@ -373,5 +373,6 @@ ericpalafox@Erics-iMac 911report %
 
 Sources:
 
-[Source1](https://www.freecodecamp.org/news/grep-command-in-linux-usage-options-and-syntax-examples/)
-[Source2](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
+[freecodecamp.org](https://www.freecodecamp.org/news/grep-command-in-linux-usage-options-and-syntax-examples/)
+
+[geeksforgeeks.org](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
