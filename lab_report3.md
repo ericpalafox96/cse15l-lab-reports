@@ -78,9 +78,8 @@ We were able to fix this issue by creating a copy of the array and putting this 
 a copy and we do not make any changes to the original array. Before the fix, we were trying to copy the values to the second half of the array, but this was not possible since the values in the
 first half of the array were no longer the same as they had been changed in the loop, respectively.
 
-## Part 2
+## Part 2 (Grep)
 ***
-
 Note: The `*` at the end of each line is searching through all of the files in the current working directory.
 
 Example 1: `-l` - This command is checking all files to match the pattern but this will only include those that do contain the given pattern within the file itself. This would certainly be useful when needing to find text that matches a specific pattern.
