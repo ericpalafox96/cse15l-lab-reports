@@ -9,7 +9,7 @@ Keys pressed: `ssh`, `<space>`, `epalafox@ieng6.ucsd.edu`, `<enter>`
 
 ## Step 5 - Clone your fork of the repository from your Github account (using the SSH URL)
 ***
-Keys pressed: `git clone git@github.com:ericpalafox96/lab7.git`, `<enter>`
+Keys pressed: `git`, `<space>`, `clone`, `<space>`, `git@github.com:ericpalafox96/lab7.git`, `<enter>`
 
 ![Step5](step5.png)
 
