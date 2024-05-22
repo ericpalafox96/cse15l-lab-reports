@@ -4,11 +4,13 @@
 ## Step 4 - Log into ieng6
 ***
 Keys pressed: `ssh`, `<space>`, `epalafox@ieng6.ucsd.edu`, `<enter>`
+
 ![Step4](step4.png)
 
 ## Step 5 - Clone your fork of the repository from your Github account (using the SSH URL)
 ***
 Keys pressed: `git clone git@github.com:ericpalafox96/lab7.git`, `<enter>`
+
 ![Step5](step5.png)
 
 
