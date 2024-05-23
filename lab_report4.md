@@ -39,7 +39,7 @@ I used the `up` command twice to go to the previous command `bash test.sh` which
 
 ## Step 9 - Commit and push the resulting change to your Github account (you can pick any commit message!)
 ***
-Keys pressed: `git` `<space>` `add` `<space>` `.`, `<enter>`, `git` `<space>` `commit` `<space>` `-m` `<space>` `"this` `<space>` `is` `<space>` `my` `<space>` `message` `<enter>`, `git` `<space>` `push` `<space>` `origin` `<space>` `main`, `<enter>`.
+Keys pressed: `git` `<space>` `add` `<space>` `.`, `<enter>`, `git` `<space>` `commit` `<space>` `-m` `<space>` `"this` `<space>` `is` `<space>` `my` `<space>` `message"` `<enter>`, `git` `<space>` `push` `<space>` `origin` `<space>` `main`, `<enter>`.
 We use the `git add .` command to update all files to ensure that when we commit, the changes will appear in the repository. Next we use the `git commit -m` command to commit the changes to github, and finally we use `git push origin main` which will actually show/push the changes to the remote repository and update the files found on github directly.
 
 ![Step9](step9.png)
